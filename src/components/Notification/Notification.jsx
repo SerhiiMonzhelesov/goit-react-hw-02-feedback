@@ -1,5 +1,7 @@
+import StyledNotification from "./StyledNotification";
+
 function Notification({message}) {
-    return <p>{message}</p>
+    return <StyledNotification className="notification">{message}</StyledNotification>
 }
 
 export default Notification;

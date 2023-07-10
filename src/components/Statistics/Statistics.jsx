@@ -1,12 +1,21 @@
-function Statistics({ stats: { good, neutral, bad }, results }) {
-   
-    return <>
-    <p>Good: {good}</p>
-    <p>Neutral: {neutral}</p>
-    <p>Bad: {bad}</p>
-    <p>Total: {results.total}</p>
-    <p>Positive feedback: {results.percentage} %</p>
-    </>
+import StyledStatistics from "./StyledStatistics";
+
+function Statistics({ stats, results }) {
+  const allStatsItem = { ...stats, ...results };
+
+  return (
+    <StyledStatistics>
+      {Object.entries(allStatsItem).map(([name, value], idx) => {
+        return (
+          <li key={idx}>
+            <p>
+              {name}: {name === "percentage"? value + ' %' : value}
+            </p>
+          </li>
+        );
+      })}
+    </StyledStatistics>
+  );
 }
 
 export default Statistics;
