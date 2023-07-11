@@ -1,13 +1,14 @@
 import StyledStatistics from "./StyledStatistics";
 
 function Statistics({ stats, results }) {
-  const allStatsItem = { ...stats, ...results };
 
+  const arrStatsItem = Object.entries({ ...stats, ...results })
+  
   return (
     <StyledStatistics>
-      {Object.entries(allStatsItem).map(([name, value], idx) => {
+      {arrStatsItem.map(([name, value]) => {
         return (
-          <li key={idx}>
+          <li key={name}>
             <p>
               {name}: {name === "percentage"? value + ' %' : value}
             </p>

@@ -18,17 +18,12 @@ const StyledFeedbackOptions = styled.div`
     cursor: pointer;
   }
 
-  & button:hover,
-  & button:focus {
+  & button:hover {
     background: #dde0a9;
     color: #554964;
     box-shadow: 0px 0px 5px 2px rgba(220, 215, 215, 0.71);
     font-weight: bold;
     border: 1px solid #c3c4c1;
-  }
-
-  & p {
-    margin: 0;
   }
 `;
 

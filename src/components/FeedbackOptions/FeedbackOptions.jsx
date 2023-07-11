@@ -1,13 +1,13 @@
 import StyledFeedbackOptions from './StyledFeedbackOptions';
-import { nanoid } from 'nanoid';
 
 function FeedbackOptions({ options, handleClick }) {
+  const arrNamesOptions = Object.keys(options);
   return (
     <StyledFeedbackOptions>
-      {Object.keys(options).map((option) => {
+      {arrNamesOptions.map((name) => {
         return (
-          <button onClick={handleClick} key={nanoid()} name={option}>
-            {option}
+          <button type="button" onClick={handleClick} key={name} name={name}>
+            {name}
           </button>
         );
       })}
