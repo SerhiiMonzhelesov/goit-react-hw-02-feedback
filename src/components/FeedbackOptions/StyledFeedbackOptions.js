@@ -12,9 +12,9 @@ const StyledFeedbackOptions = styled.div`
     font-size: 18px;
     letter-spacing: 0.06em;
     border-radius: 7px;
-    border: 1px solid #eee7b2;
-    color: #4d7474;
-    background: #eee7b2;
+    border: 1px solid #d8f1d6;
+    color: #727676;
+    background: #1b910f1c;
     cursor: pointer;
   }
 
@@ -24,6 +24,10 @@ const StyledFeedbackOptions = styled.div`
     box-shadow: 0px 0px 5px 2px rgba(220, 215, 215, 0.71);
     font-weight: bold;
     border: 1px solid #c3c4c1;
+  }
+
+  & button:active {
+    background-color: #eee7b2;
   }
 `;
 

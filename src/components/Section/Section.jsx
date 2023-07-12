@@ -2,7 +2,6 @@ import { StyledSection } from './StyledSection';
 import PropTypes from 'prop-types';
 
 function Section({ children, title, ...restProps }) {
-  
   return (
     <StyledSection {...restProps}>
       <h2>{title}</h2>
@@ -12,8 +11,8 @@ function Section({ children, title, ...restProps }) {
 }
 
 Section.propTypes = {
-  children: PropTypes.node,
-  title: PropTypes.string,
+  children: PropTypes.node.isRequired,
+  title: PropTypes.string.isRequired,
 };
 
 export default Section;
