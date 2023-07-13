@@ -1,8 +1,12 @@
 import StyledStatistics from './StyledStatistics';
 import PropTypes from 'prop-types';
 
-function Statistics({ stats, results }) {
-  const arrStatsItem = Object.entries({ ...stats, ...results });
+function Statistics({ stats, total, percentage }) {
+  const arrStatsItem = Object.entries({
+    ...stats,
+    total: total,
+    percentage: percentage,
+  });
 
   return (
     <StyledStatistics>
@@ -27,8 +31,7 @@ Statistics.propTypes = {
     neutral: PropTypes.number.isRequired,
     bad: PropTypes.number.isRequired,
   }).isRequired,
-  results: PropTypes.shape({
-    total: PropTypes.number.isRequired,
-    percentage: PropTypes.number.isRequired,
-  }).isRequired,
+
+  total: PropTypes.number.isRequired,
+  percentage: PropTypes.number.isRequired,
 };
